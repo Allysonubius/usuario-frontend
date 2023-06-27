@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
 
   // otherwise redirect to home
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, // redireciona a rota vazia para /home
-  { path: '**', redirectTo: 'home' } // redireciona todas as outras rotas para /home
+  { path: '', redirectTo: 'login-user', pathMatch: 'full' }, // redireciona a rota vazia para /home
+  { path: '**', redirectTo: 'login-user' } // redireciona todas as outras rotas para /home
 ];
 
 @NgModule({
