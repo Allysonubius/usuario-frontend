@@ -1,1 +1,60 @@
-<p>login works!</p>
+<div class="h-100">
+  <div class="row min-vh-100">
+    <div class="col-md-6 bg-image overflow-hidden">
+      <div class="bg-video">
+        <img id="video-container" [src]="randomGifUrl" alt="GIF animado" />
+      </div>
+    </div>
+    <div class="col-md-6 bg-light d-flex align-items-center">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-header text-center">
+            <h2 style="font-size: 52px;">
+              <span style="color: #FF0000;">M</span>
+              <span style="color: #00FF00;">I</span>
+              <span style="color: #0000FF;">N</span>
+              <span style="color: #FFA500;">D</span>
+              <span style="color: #9400D3;">S</span>
+              <span style="color: #FFFF00;">E</span>
+              <span style="color: #00CED1;">T</span>
+            </h2>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="form-group row">
+                <label for="username" class="col-sm-3 col-form-label">Username</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control form-control-sm" id="username" aria-describedby="username" formControlName="username" autocomplete="username">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="password" class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-8">
+                  <input type="password" class="form-control form-control-sm" id="password" aria-describedby="password" formControlName="password" required autocomplete="current-password">
+                </div>
+              </div>
+              <div class="form-group row text-center">
+                <div class="col-sm-12">
+                  <div class="form-check form-check-inline">
+                    <label>
+                      <input type="checkbox" class="filled-in form-check-input" id="rememberMe" formControlName="rememberMe">
+                      <span class="form-check-label" for="rememberMe">Lembre-se de mim</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row centrButton">
+                <div class="col-sm-12 d-flex justify-content-center align-items-center">
+                  <button [disabled]="loading" type="submit" class="btn btn-primary">LOGIN<i class="material-icons right">person_pin</i></button>
+                  <div class="btn-group mx-5 mt-3 mt-md-0" role="group">
+                    <button type="button" class="btn btn-secondary">SUPORTE<i class="material-icons right">help</i></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
