@@ -13,6 +13,9 @@ import { LoginService } from './service/login/login.service';
 import { AlertsService } from './service/Alerts/alerts.service';
 import { NavbarComponent } from './components/default/navbar/navbar.component';
 import { FooterComponent } from './components/default/footer/footer.component';
+import { WelcomeComponent } from './components/modals/welcome/welcome.component';
+import { SuccessComponent } from './components/modals/success/success.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { FooterComponent } from './components/default/footer/footer.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
+    WelcomeComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { FooterComponent } from './components/default/footer/footer.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [
     AuthGuard,
