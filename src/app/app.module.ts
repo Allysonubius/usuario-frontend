@@ -11,19 +11,23 @@ import { AuthGuard } from './authGuard/auth.guard';
 import { UserService } from './service/user/user.service';
 import { LoginService } from './service/login/login.service';
 import { AlertsService } from './service/Alerts/alerts.service';
+import { NavbarComponent } from './components/default/navbar/navbar.component';
+import { FooterComponent } from './components/default/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [
     AuthGuard,
