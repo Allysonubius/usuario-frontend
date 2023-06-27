@@ -23,9 +23,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "node_modules/materialize-css/dist/css/materialize.min.css",
+              "node_modules/material-design-icons/iconfont/material-icons.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/materialize-css/dist/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
