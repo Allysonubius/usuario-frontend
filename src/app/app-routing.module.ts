@@ -5,12 +5,12 @@ import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './authGuard/auth.guard';
 
 const routes: Routes = [
-  { path: 'login-user', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'api/login-user', component: LoginComponent },
+  { path: 'api/home', component: HomeComponent, canActivate: [AuthGuard] },
 
   // otherwise redirect to home
-  { path: '', redirectTo: 'login-user', pathMatch: 'full' }, // redireciona a rota vazia para /home
-  { path: '**', redirectTo: 'login-user' } // redireciona todas as outras rotas para /home
+  { path: '', redirectTo: 'api/login-user', pathMatch: 'full' }, // redireciona a rota vazia para /home
+  { path: '**', redirectTo: 'api/login-user' } // redireciona todas as outras rotas para /home
 ];
 
 @NgModule({
