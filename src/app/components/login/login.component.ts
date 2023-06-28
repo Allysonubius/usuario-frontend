@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/models/user/user.model';
 import { AlertsService } from 'src/app/service/Alerts/alerts.service';
 import { LoginService } from 'src/app/service/login/login.service';
-import { WelcomeComponent } from '../modals/welcome/welcome.component';
 
 @Component({
   selector: 'app-login',
@@ -33,7 +31,6 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private router: Router,
     private alertService : AlertsService,
-    private dialog: MatDialog,
     ) {
       // Redirect to home if alrealdy logged in
       if(this.loginService.currentUserValue){
@@ -98,13 +95,6 @@ export class LoginComponent implements OnInit {
 
   get f() {
     return this.loginForm.controls;
-  }
-
-  showWelcomeDialog(): void {
-    const dialogRef = this.dialog.open(WelcomeComponent, {
-      width: '400px',
-      // Outras configurações do pop-up
-    });
   }
 
   onSubmit(){

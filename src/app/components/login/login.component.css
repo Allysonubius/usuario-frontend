@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.icon-button{
+  margin-top: 0.1em;
+  margin-left: 0.8em;
+}
+
 .card {
   width: 70%;
   border: none;

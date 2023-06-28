@@ -1,11 +1,8 @@
 nav div a img{
-  margin-left: 5em;
+  margin-left: 2.5em;
+  margin-right: 0.5em;
 }
 
-nav div a span{
-  margin-left: 1em;
-}
-
-nav div a {
-  margin-right: 3em;
+nav div .row {
+  margin-right: 5em;
 }
