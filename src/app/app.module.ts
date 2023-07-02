@@ -16,6 +16,7 @@ import { WelcomeComponent } from './components/modals/welcome/welcome.component'
 import { SuccessComponent } from './components/modals/success/success.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     WelcomeComponent,
     SuccessComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,
