@@ -1,5 +1,8 @@
 .overflow-page{
-  text-align: center;
   overflow-y: scroll;
   height: 93vh; /* Defina uma altura para o container que desejar */
+}
+
+.btn-center{
+  text-align: center;
 }

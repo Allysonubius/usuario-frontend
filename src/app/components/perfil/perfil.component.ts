@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilComponent implements OnInit {
   usernamee: string = 'Allyson';
-  job : string = 'Mid Level Full Stack Developer';
+  cpf: string = '00000000000'
+  cep: string = '00000000';
 
   constructor() { }
 
