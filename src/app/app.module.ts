@@ -17,6 +17,13 @@ import { SuccessComponent } from './components/modals/success/success.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { CpfPipe } from './components/pipe/cpf/cpf.pipe';
+import { CepPipe } from './components/pipe/cep/cep.pipe';
+import { HourPipe } from './components/pipe/hour/hour.pipe';
+import { DateHourPipe } from './components/pipe/dateHour/date-hour.pipe';
+import { CnpjPipe } from './components/pipe/cnpj/cnpj.pipe';
+import { DatePipe } from './components/pipe/date/date.pipe';
+import { EmailPipe } from './components/pipe/email/email.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +35,13 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     WelcomeComponent,
     SuccessComponent,
     PerfilComponent,
+    CpfPipe,
+    CepPipe,
+    HourPipe,
+    DateHourPipe,
+    CnpjPipe,
+    DatePipe,
+    EmailPipe,
   ],
   imports: [
     BrowserModule,
