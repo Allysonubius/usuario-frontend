@@ -1,1 +1,8 @@
 
+footer div a {
+  border-radius: 5em;
+}
+
+footer div a .image{
+  width: 2.5em;
+}
