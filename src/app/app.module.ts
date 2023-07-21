@@ -24,6 +24,7 @@ import { DateHourPipe } from './components/pipe/dateHour/date-hour.pipe';
 import { CnpjPipe } from './components/pipe/cnpj/cnpj.pipe';
 import { DatePipe } from './components/pipe/date/date.pipe';
 import { EmailPipe } from './components/pipe/email/email.pipe';
+import { CardHomeComponent } from './components/cards/card-home/card-home.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { EmailPipe } from './components/pipe/email/email.pipe';
     CnpjPipe,
     DatePipe,
     EmailPipe,
+    CardHomeComponent
   ],
   imports: [
     BrowserModule,
