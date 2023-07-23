@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './authGuard/auth.guard';
-import { PerfilComponent } from './components/perfil/perfil.component';
+import { PerfilComponent } from './components/pages/perfil/perfil.component';
 
 const routes: Routes = [
   { path: 'api/login-user', component: LoginComponent },
