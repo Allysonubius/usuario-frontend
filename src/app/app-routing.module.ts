@@ -4,11 +4,13 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './authGuard/auth.guard';
 import { PerfilComponent } from './components/pages/perfil/perfil.component';
+import { ListUsersComponent } from './components/pages/list-users/list-users.component';
 
 const routes: Routes = [
   { path: 'api/login-user', component: LoginComponent },
   { path: 'api/perfil', component: PerfilComponent, canActivate: [AuthGuard] },
   { path: 'api/home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'api/listar-usuarios', component: ListUsersComponent, canActivate: [AuthGuard] },
 
   // otherwise redirect to home
   { path: '', redirectTo: 'api/login-user', pathMatch: 'full' }, // redireciona a rota vazia para /home

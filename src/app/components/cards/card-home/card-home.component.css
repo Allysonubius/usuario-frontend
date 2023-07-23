@@ -1,0 +1,10 @@
+.card-footer button {
+  border-radius:2em ;
+}
+
+.card-footer button .btnColor{
+  color: aliceblue;
+  padding: 1em;
+  border-radius: 1em;
+  text-decoration: none;
+}
