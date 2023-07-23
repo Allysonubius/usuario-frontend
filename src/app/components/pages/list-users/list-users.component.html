@@ -11,9 +11,36 @@
           </ul>
         </div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <table class="table table-sm table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Id do usuário</th>
+                <th scope="col">Nome do usuário</th>
+                <th scope="col">Nome do usuário</th>
+                <th scope="col">Data de criação</th>
+                <th scope="col">Data de atualização</th>
+                <th scope="col">Perfil</th>
+                <th scope="col">Status conta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngIf="usuarios && usuarios.content">
+                <tr *ngFor="let usuario of usuarios.content">
+                  <td>{{ usuario.id }}</td>
+                  <td>{{ usuario.username }}</td>
+                  <td>{{ usuario.dateCreate }}</td>
+                  <td>{{ usuario.dateUpdate }}</td>
+                  <td>{{ usuario.email }}</td>
+                  <td>
+                    <ul>
+                      <li *ngFor="let role of usuario.perfil">{{ role.role }}</li>
+                    </ul>
+                  </td>
+                  <td>{{ usuario.active }}</td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
