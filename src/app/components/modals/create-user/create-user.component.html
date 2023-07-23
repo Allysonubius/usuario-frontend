@@ -1,0 +1,43 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Criar Usuário
+              </button>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Criar usuário</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="password" aria-label="password">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="username" aria-label="username">
+          </div>
+          <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="email" aria-label="email">
+          </div>
+          <div class="col-auto">
+            <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+            <select class="form-select" id="autoSizingSelect">
+              <option selected>Perfil</option>
+              <option value="1">Administrador</option>
+              <option value="2">Aluno</option>
+              <option value="3">Secretária</option>
+              <option value="4">Diretoria</option>
+              <option value="5">Professor</option>
+              <option value="6">Desenvolvedor</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Criar</button>
+      </div>
+    </div>
+  </div>
+</div>

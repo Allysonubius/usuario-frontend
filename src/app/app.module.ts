@@ -26,9 +26,7 @@ import { DatePipe } from './components/pipe/date/date.pipe';
 import { EmailPipe } from './components/pipe/email/email.pipe';
 import { CardHomeComponent } from './components/cards/card-home/card-home.component';
 import { ListUsersComponent } from './components/pages/list-users/list-users.component';
-import { CreateUsersComponent } from './components/pages/create-users/create-users.component';
-import { DeleteUsersComponent } from './components/pages/delete-users/delete-users.component';
-import { ActiveOrDesactiveUserComponent } from './components/pages/active-or-desactive-user/active-or-desactive-user.component';
+import { CreateUserComponent } from './components/modals/create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -49,9 +47,7 @@ import { ActiveOrDesactiveUserComponent } from './components/pages/active-or-des
     EmailPipe,
     CardHomeComponent,
     ListUsersComponent,
-    CreateUsersComponent,
-    DeleteUsersComponent,
-    ActiveOrDesactiveUserComponent
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
