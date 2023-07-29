@@ -2,6 +2,7 @@ import { Roles } from "../roles/roles.model";
 import { UsersList } from "../userList/users.model";
 
 export class Users{
+  [x: string]: any;
   content?: UsersList[];
   pageable?: any;
   last?: boolean;

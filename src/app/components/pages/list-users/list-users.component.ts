@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Users } from 'src/app/models/users/users.model';
 import { UserService } from 'src/app/service/user/user.service';
+import { Roles } from '../../../models/roles/roles.model';
+import { UsersList } from '../../../models/userList/users.model';
 
 @Component({
   selector: 'app-list-users',
@@ -21,13 +23,15 @@ export class ListUsersComponent implements OnInit {
 
   listarUsuarios(){
     this.userService.listUsers().subscribe(
-      (data : Users) => {
-        data.content;
+      (response : Users) => {
+        this.usuarios = response;
       },
       error =>{
         console.error('Error ao obter lista de usuários :', error);
       }
     )
   }
+
+
 
 }
