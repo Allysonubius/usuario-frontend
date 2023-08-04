@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/models/user/user.model';
 import { AlertsService } from 'src/app/service/Alerts/alerts.service';
 import { LoginService } from 'src/app/service/login/login.service';
+
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -31,6 +33,7 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private router: Router,
     private alertService : AlertsService,
+
     ) {
       // Redirect to home if alrealdy logged in
       if(this.loginService.currentUserValue){
@@ -110,12 +113,31 @@ export class LoginComponent implements OnInit {
 
         this.router.navigate(['api/home']); // Redirect page initial
 
-        this.alertService.success;
+        this.showSuccessAlert();
       },
       (error: string) =>{
-        this.alertService.error;
+        this.showErrorAlert();
         this.loading = false;
       }
     );
+  }
+
+  showSuccessAlert() {
+    Swal.fire({
+      text: 'Bem Vindo !',
+      icon: 'success',
+      showConfirmButton:false,
+      timer:2000
+    });
+  }
+
+  showErrorAlert() {
+    Swal.fire({
+      text: 'Falha no login. Verifique suas credenciais.',
+      position:'top-end',
+      icon: 'error',
+      showConfirmButton:false,
+      timer:2000
+    });
   }
 }

@@ -27,7 +27,7 @@ import { EmailPipe } from './components/pipe/email/email.pipe';
 import { CardHomeComponent } from './components/cards/card-home/card-home.component';
 import { ListUsersComponent } from './components/pages/list-users/list-users.component';
 import { CreateUserComponent } from './components/modals/create-user/create-user.component';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +55,8 @@ import { CreateUserComponent } from './components/modals/create-user/create-user
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    SweetAlert2Module.forRoot(),
   ],
   providers: [
     AuthGuard,
