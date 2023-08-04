@@ -8,6 +8,9 @@
             <li class="nav-item">
               <app-create-user></app-create-user>
             </li>
+            <li class="nav-item">
+              <app-create-user></app-create-user>
+            </li>
           </ul>
         </div>
         <div class="card-body">
@@ -16,9 +19,9 @@
               <tr>
                 <th scope="col">Id do usuário</th>
                 <th scope="col">Nome do usuário</th>
-                <th scope="col">Nome do usuário</th>
-                <th scope="col">Data de criação</th>
                 <th scope="col">Data de atualização</th>
+                <th scope="col">Data de criação</th>
+                <th scope="col">Email</th>
                 <th scope="col">Status conta</th>
               </tr>
             </thead>
@@ -27,8 +30,8 @@
                 <tr *ngFor="let usuario of usuarios.content">
                   <td>{{ usuario.id }}</td>
                   <td>{{ usuario.username }}</td>
-                  <td>{{ usuario.dateCreate | dateHour}}</td>
-                  <td>{{ usuario.dateUpdate | dateHour}}</td>
+                  <td>{{ usuario.dateCreate }}</td>
+                  <td>{{ usuario.dateUpdate }}</td>
                   <td>{{ usuario.email | email}}</td>
                   <td>
                     <ng-container *ngIf="usuario.active === 'true'; else inativo">{{ 'Ativa' }}</ng-container>
